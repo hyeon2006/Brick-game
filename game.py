@@ -30,6 +30,7 @@ for r in range(brickRows):
 
 running = True
 while running:
+    screen.fill(white)
     for event in pygame.event.get():
         if event.type == pygame.QUIT:
             running = False
@@ -63,7 +64,6 @@ while running:
     if bricks == []:
         running = False
 
-    screen.fill(white)
     pygame.draw.ellipse(screen, black, ball)
     pygame.draw.rect(screen, blue, paddle)
     for brick in bricks:
